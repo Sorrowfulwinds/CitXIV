@@ -1,3 +1,5 @@
+using Content.Server._Citadel.AgeGate;
+using Content.Server._Citadel.EntryInfo;
 using Content.Server.Acz;
 using Content.Server.Administration;
 using Content.Server.Administration.Logs;
@@ -11,6 +13,7 @@ using Content.Server.EUI;
 using Content.Server.GameTicking;
 using Content.Server.GhostKick;
 using Content.Server.GuideGenerator;
+using Content.Server._Citadel.AgeGate;
 using Content.Server.Info;
 using Content.Server.IoC;
 using Content.Server.Maps;
@@ -146,6 +149,7 @@ namespace Content.Server.Entry
                 IoCManager.Resolve<RecipeManager>().Initialize();
                 IoCManager.Resolve<IAdminManager>().Initialize();
                 IoCManager.Resolve<IAfkManager>().Initialize();
+                IoCManager.Resolve<AgeGateManager>().Initialize();
                 IoCManager.Resolve<RulesManager>().Initialize();
 
                 IoCManager.Resolve<DiscordLink>().Initialize();

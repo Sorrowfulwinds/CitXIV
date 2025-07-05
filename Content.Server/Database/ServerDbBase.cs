@@ -1122,6 +1122,30 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             db.DbContext.Whitelist.Remove(entry);
             await db.DbContext.SaveChangesAsync();
         }
+        public async Task<bool> GetAgeGate(NetUserId player)
+        {
+            await using var db = await GetDb();
+            var dbPlayer = await db.DbContext.Player.Where(dbPlayer => dbPlayer.UserId == player).SingleOrDefaultAsync();
+            if (dbPlayer == null)
+            {
+                return false;
+            }
+            return dbPlayer.AgeGateChecked;
+        }
+
+        public async Task SetAgeGate(NetUserId player, bool agecheck)
+        {
+            await using var db = await GetDb();
+
+            var dbPlayer = await db.DbContext.Player.Where(dbPlayer => dbPlayer.UserId == player).SingleOrDefaultAsync();
+            if (dbPlayer == null)
+            {
+                return;
+            }
+
+            dbPlayer.AgeGateChecked = agecheck;
+            await db.DbContext.SaveChangesAsync();
+        }
 
         public async Task<DateTimeOffset?> GetLastReadRules(NetUserId player)
         {

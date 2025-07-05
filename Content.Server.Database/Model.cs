@@ -566,6 +566,8 @@ namespace Content.Server.Database
         public Guid UserId { get; set; }
         public DateTime FirstSeenTime { get; set; }
 
+        public bool AgeGateChecked { get; set; }
+
         // Data that gets updated on each join.
         public string LastSeenUserName { get; set; } = null!;
         public DateTime LastSeenTime { get; set; }
