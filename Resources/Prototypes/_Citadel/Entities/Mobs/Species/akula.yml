@@ -1,0 +1,9 @@
+- type: entity
+  save: false
+  name: Urist Sharkfin
+  parent: BaseMobHuman
+  id: BaseMobAkula
+
+- type: entity
+  parent: MobHumanDummy
+  id: MobAkulaDummy

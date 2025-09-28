@@ -15,6 +15,8 @@ species-name-moth = Dnin-Nepid
 species-name-skeleton = Skeleton
 species-name-vox = Vox
 species-name-gingerbread = delicious baked good
+#citadel species
+species-name-akula = Akula
 
 ## Misc species things
 
