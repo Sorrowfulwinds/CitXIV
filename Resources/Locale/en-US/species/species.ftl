@@ -15,6 +15,8 @@ species-name-moth = Dnin-Nepid
 species-name-skeleton = Skeleton
 species-name-vox = Vox
 species-name-gingerbread = delicious baked good
+species-name-vulpkanin = Vulpkanin
+
 #citadel species
 species-name-akula = Akula
 
