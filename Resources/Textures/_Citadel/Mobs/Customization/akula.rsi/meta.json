@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "akula_tail from https://github.com/Citadel-Station-13/Citadel-Station-13-RP/commit/b1388fe5c354695455e5b3101e190db83dfed76a",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "akula_tail",
+      "directions": 4
+    }
+  ]
+}
